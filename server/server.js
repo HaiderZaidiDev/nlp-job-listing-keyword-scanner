@@ -13,13 +13,13 @@ app.get('/watson_nlp', async(req, res) => {
   const naturalLanguageUnderstanding = new NaturalLanguageUnderstandingV1({
     version: '2021-08-01',
     authenticator: new IamAuthenticator({
-      apikey: proccess.env.API_KEY,
+      apikey: process.env.API_KEY,
     }),
-    serviceUrl: proccess.env.SERVICE_URL,
+    serviceUrl: process.env.SERVICE_URL,
   });
 
   const analyzeParams = {
-    'text': listingURL,
+    'url': listingURL,
     'features': {
       'keywords': {
         'limit': 10
@@ -29,6 +29,7 @@ app.get('/watson_nlp', async(req, res) => {
 
   const nlp = naturalLanguageUnderstanding.analyze(analyzeParams)
     .then(analysisResults => {
+      console.log(analysisResults)
       return analysisResults;
     })
     .catch(err => {
