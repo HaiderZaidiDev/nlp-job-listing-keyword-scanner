@@ -11,7 +11,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Demo][https://i.imgur.com/KXVlaoU.gif]](https://haiderzaidi.ca/keywords)
 
 ### Built With
 
@@ -43,23 +43,23 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-
-
+3. Start the React project.
+   ```sh
+   npm start
+   ```
+4. Start the API Proxy Server.
+    ```sh
+    cd server
+    node server.js
+    ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+Paste the responsibilities section of a job listing (or really, any relevant information) onto the website to fetch important keywords - then, read through the list of keywords and try to include them in relevant bullet points.
 
 
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
-
+_For an example, check the demo-gif above to see how the website works._
 
 
 <!-- CONTRIBUTING -->
@@ -72,11 +72,3 @@ Contributions are what make the open source community such an amazing place to b
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
