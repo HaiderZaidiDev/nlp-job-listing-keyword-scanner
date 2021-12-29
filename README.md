@@ -11,7 +11,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Demo][https://i.imgur.com/KXVlaoU.gif]](https://haiderzaidi.ca/keywords)
+[Demo Gif](https://i.imgur.com/KXVlaoU.gif)
 
 ### Built With
 
