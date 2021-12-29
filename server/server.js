@@ -1,12 +1,17 @@
 const express = require('express');
 const app = express();
+var https = require('https')
+var fs = require('fs')
 require('dotenv').config();
 const port = process.env.PORT || 5000;
-app.listen(port, () => console.log(`Listening on port ${port}`));
+
+
+//Creating the proxy server, supporting SSL.
+https.createServer(app).listen(port, () => console.log(`Listening on port ${port}`));
 
 app.get('/watson_nlp', async(req, res) => {
-  // API service to fetch results from the IBM Watson NLP API.
-  const listingURL = req.query.url
+  /* Proxy API service to fetch results from the IBM Watson NLP API.*/
+  const listingText = req.query.text
   const NaturalLanguageUnderstandingV1 = require('ibm-watson/natural-language-understanding/v1');
   const { IamAuthenticator } = require('ibm-watson/auth');
 
@@ -19,7 +24,7 @@ app.get('/watson_nlp', async(req, res) => {
   });
 
   const analyzeParams = {
-    'url': listingURL,
+    'text': listingText,
     'features': {
       'keywords': {
         'limit': 10
