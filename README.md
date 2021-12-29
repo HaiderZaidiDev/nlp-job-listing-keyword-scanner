@@ -11,7 +11,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-=======
 ![Demo Gif](https://i.imgur.com/dmDUe2S.gif)
 
 ### Built With
