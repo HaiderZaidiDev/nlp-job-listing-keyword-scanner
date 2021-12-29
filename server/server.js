@@ -7,7 +7,10 @@ const port = process.env.PORT || 5000;
 
 
 //Creating the proxy server, supporting SSL.
-https.createServer(app).listen(port, () => console.log(`Listening on port ${port}`));
+https.createServer({
+  key: fs.readFileSync('server.key'),
+  cert: fs.readFileSync('server.cert')
+}, app).listen(port, () => console.log(`Listening on port ${port}`));
 
 app.get('/watson_nlp', async(req, res) => {
   /* Proxy API service to fetch results from the IBM Watson NLP API.*/
