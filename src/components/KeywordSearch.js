@@ -9,7 +9,7 @@ const { IamAuthenticator } = require('ibm-watson/auth');
 
 const KeywordSearch = () => {
   /** Fetching keywords from a job description using the Watson AI (NLP) platform. **/
-  const [link, setLink] = useState('')
+  const [text, setText] = useState('')
   const [keywords, setKeywords] = useState('')
   const submitHandler = (e) => {
     e.preventDefault();
@@ -18,11 +18,10 @@ const KeywordSearch = () => {
 
   const nlp = async() => {
     /** Queries results from the Watson API, proxied through the express API server. **/
-    const response = await fetch('/watson_nlp?url='+link);
+    const response = await fetch('/watson_nlp/?text='+text);
     const res = await response.json();
     setKeywords(res.express.result.keywords)
   }
-
 
   return (
     <Row>
@@ -30,15 +29,23 @@ const KeywordSearch = () => {
           <div className="keyword-search">
             <div className="keyword-search-content">
               <h2> Keyword Scan </h2>
-              <p className="search-desc"> Paste either a link or the responsibilities of a job listing (more accurate) in the box below.</p>
-              <label> Job Listing URL (e.g., LinkedIn, Indeed)</label>
+              <p className="search-desc"> Paste the responsiblities section from
+                a job listing below, here's a link to a <a id="sample-link"
+                  href="https://careers.ibm.com/job/13997681/brand-technical-sales-specialist-intern-4-months-remote/?codes=IBM_CareerWebSite">
+                  sample listing
+                </a>.
+              </p>
+              <label> Job Responsibilities </label>
               <form onSubmit={submitHandler}>
-                <input
-                  className="listing-link"
-                  placeholder="Paste a link to a job listing here and get keywords from the listing to include in your resume."
-                  onChange={(event) => setLink(event.target.value)}
+                {/* In the text area, we use RegEx to replace line breaks with
+                  spaces, to ensure the text plays nicely with the API. */}
+                <textarea
+                  className="listing-text"
+                  placeholder="With great artificial intelligence platforms, come great responsibilities... for your resume!"
+                  onChange={(event) => setText(event.target.value.replace(/(\r\n|\n|\r)/gm, " "))}
                   >
-                </input>
+                </textarea>
+                <button type="submit" class="action-btn" id="submit">Submit</button>
               </form>
               {keywords && <Keywords keywords={keywords}/>}
             </div>

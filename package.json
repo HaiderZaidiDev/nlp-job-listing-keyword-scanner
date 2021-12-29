@@ -2,7 +2,7 @@
   "name": "keywords",
   "homepage": ".",
   "version": "0.1.0",
-  "proxy": "http://localhost:5000/",
+  "proxy": "https://haiderzaidi.ca:5000",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -20,8 +20,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start --ignore lcient",
-    "server": "node server/index.js --ignore client",
+    "start": "react-scripts start",
+    "server": "cd server & node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
