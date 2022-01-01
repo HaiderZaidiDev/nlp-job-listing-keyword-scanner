@@ -31,7 +31,8 @@ const KeywordSearch = () => {
               <h2> Keyword Scan </h2>
               <p className="search-desc"> Paste the responsiblities section from
                 a job listing below, here's a link to a <a id="sample-link"
-                  href="https://careers.ibm.com/job/13997681/brand-technical-sales-specialist-intern-4-months-remote/?codes=IBM_CareerWebSite">
+                  href="https://www.linkedin.com/jobs/view/2854876732/"
+                  target="_blank">
                   sample listing
                 </a>.
               </p>

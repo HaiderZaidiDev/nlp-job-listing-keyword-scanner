@@ -8,7 +8,7 @@ const Header = () => {
           <div className="header">
             <div className="header-content">
               <h1> Optimize your resume, with AI-driven keyword scanning. </h1>
-              <p> Powered by the IBM Watson Natural Language Proccessing (NLP) API.</p>
+              <p> Powered by the IBM Watson Natural Language Proccessing (NLP) API, created by <a href="https://www.linkedin.com/in/haider-zaidi/" id="header-link" target="_blank"> Haider Zaidi</a>.</p>
               <a href="https://github.com/HaiderZaidiDev/nlp-job-listing-keyword-scanner" target="_blank"><button class="action-btn">See the Code</button></a>
             </div>
           </div>

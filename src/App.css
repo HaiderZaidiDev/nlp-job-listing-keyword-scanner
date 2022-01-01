@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&display=swap');
 /* Global */
 body {
+  height: 100%;
   background: #FFFFFF;
   overflow-x: hidden;
 }
 
-a {
-  color: #010414;
-  text-decoration: none;
-}
 
 a:hover {
   color: #010414;
@@ -44,6 +41,17 @@ p {
 input, label {
   display: block;
 }
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.col {
+  padding: 0;
+}
+
 /* Header */
 .header {
   background: #010414;
@@ -78,6 +86,14 @@ button.action-btn {
   font-family: Poppins;
   font-weight: 300;
   font-size: 0.85em;
+}
+
+a#header-link {
+    color: #C4AFFF;
+}
+
+a#header-link:hover {
+  color: #9A89C9;;
 }
 
 /* Keyword Scan */
@@ -151,6 +167,7 @@ svg#yellow {
 
 .keywords {
   margin-top: 2.5vh;
+  margin-bottom: 5vh;
 }
 
 .keyword p {
@@ -180,4 +197,30 @@ svg#yellow {
 img#network-illustration {
   display: none;
   margin-bottom: 0vh;
+}
+
+/* Footer */
+.footer {
+  padding: 0.5vh 0 0.5vh 0;
+  width: 100%;
+  bottom: 0;
+  background: #C4AFFF;
+  display: flex;
+  align-items: end;
+  position:fixed;
+  bottom: 0;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.footer a:hover {
+  color: #f7f5fc;
+}
+
+p#footer-content {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin: 0;
 }
