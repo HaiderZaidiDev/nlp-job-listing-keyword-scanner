@@ -3,7 +3,7 @@
 <p align="center">
   <h3 align="center">NLP Keyword Scanner</h3>
   <p align="center">
-    Scans keywords in a job-listing using artificial intelligence (NLP) to help optimize your resume.
+    A web-app which scans keywords in a job listing, using the IBM Watson Natural Language Processing API.
 	</p>
 </p>
 
@@ -11,7 +11,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-=======
 ![Demo Gif](https://i.imgur.com/dmDUe2S.gif)
 
 ### Built With
@@ -28,11 +27,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Checkout the [IBM Watson Natural Language Processing API here](https://cloud.ibm.com/apidocs/natural-language-understanding), then create your own credentials and service urls. Set these to their respective environment variables: `apikey`, `serviceURL`
 
 ### Installation
 
