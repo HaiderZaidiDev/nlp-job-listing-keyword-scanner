@@ -8,8 +8,8 @@ const port = process.env.PORT || 5000;
 
 //Creating the proxy server, supporting SSL.
 https.createServer({
-  key: fs.readFileSync('server.key'),
-  cert: fs.readFileSync('server.cert')
+  key: fs.readFileSync('privkey.pem'),
+  cert: fs.readFileSync('cert.pem')
 }, app).listen(port, () => console.log(`Listening on port ${port}`));
 
 app.get('/watson_nlp', async(req, res) => {
@@ -17,7 +17,6 @@ app.get('/watson_nlp', async(req, res) => {
   const listingText = req.query.text
   const NaturalLanguageUnderstandingV1 = require('ibm-watson/natural-language-understanding/v1');
   const { IamAuthenticator } = require('ibm-watson/auth');
-
   const naturalLanguageUnderstanding = new NaturalLanguageUnderstandingV1({
     version: '2021-08-01',
     authenticator: new IamAuthenticator({
